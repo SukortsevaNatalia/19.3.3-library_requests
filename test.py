@@ -58,28 +58,28 @@ print(f'Статус кода GET: {res_get_pets}')
 print(res_get_pets.json())
 
 # change name and status by id
-id_pet = '9223372036854774872'
+id_pet = '9223372036854775761'
 new_info = {'name': 'Snake', 'status': 'pending'}
 res_post_pet = requests.post(f'https://petstore.swagger.io/v2/pet/{id_pet}', data=new_info, headers={'accept': 'application/json'})
 print(f'Статус кода POST: {res_post_pet}')
 print(res_post_pet.json())
 
 # search pet by "id"
-id_pet = '9223372036854774872'
+id_pet = '9223372036854775761'
 res_get_pet_id = requests.get(f'https://petstore.swagger.io/v2/pet/{id_pet}', headers={'accept': 'application/json'})
 print(f'Статус кода GET: {res_get_pet_id}')
 print(res_get_pet_id.json())
 
 # adding  a photo of the pet
 files = {'file': open('snake.jpg.', 'rb')}
-id_pet = '9223372036854774872'
+id_pet = '9223372036854775761'
 res_post_pet_file = requests.post(f'https://petstore.swagger.io/v2/pet/{id_pet}/uploadImage', files=files, headers={'accept': 'application/json'})
 print(f'Статус кода POST: {res_post_pet_file}')
 print(res_post_pet_file.json())
 
 # deleting the pet
-api_key = '123456789'
-id_pet = '9223372036854774872'
-res_delete_pet = requests.delete(f'https://petstore.swagger.io/v2/pet/{id_pet}', headers={'accept': 'application/json'})
-print(f'Статус кода DELETE: {res_delete_pet}')
-print(res_delete_pet.json())
+# api_key = '123456789'
+# id_pet = '9223372036854775761'
+# res_delete_pet = requests.delete(f'https://petstore.swagger.io/v2/pet/{id_pet}', headers={'accept': 'application/json'})
+# print(f'Статус кода DELETE: {res_delete_pet}')
+# print(res_delete_pet.json(
