@@ -77,7 +77,7 @@ res_post_pet_file = requests.post(f'https://petstore.swagger.io/v2/pet/{id_pet}/
 print(f'Статус кода POST: {res_post_pet_file}')
 print(res_post_pet_file.json())
 
-# deleting the user
+# deleting the pet
 api_key = '123456789'
 id_pet = '9223372036854774872'
 res_delete_pet = requests.delete(f'https://petstore.swagger.io/v2/pet/{id_pet}', headers={'accept': 'application/json'})
